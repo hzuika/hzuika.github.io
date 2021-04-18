@@ -1,4 +1,4 @@
-[INDEX](../)
+[INDEX](../)  
 
 # Blender と IME
 
