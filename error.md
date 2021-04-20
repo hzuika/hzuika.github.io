@@ -2,6 +2,15 @@
 
 このページでは，遭遇したエラーとその対処法について載せていきます．
 
+## Visual Studio Code の日本語入力が遅い．
+発生日:2021-04-21 
+拡張機能の`coenraads.bracket-pair-colorizer-2`が原因．
+### 対処
+該当の拡張機能をアンインストールし，`coenraads.bracket-pair-colorizer`を入れる．
+### 参考
+[VSCodeのVimプラグインが重いと感じた時に行った設定 - Qiita](https://qiita.com/kz110/items/4e92d5680db2a9b2067b)
+
+
 ## サービスの作成に失敗しました listen EACCES: permission denied 0.0.0.0:52330
 発生日:2021-04-18 16:12:30<br/>
 Visual Studio Code で 拡張機能 Open In Default Browser(peakchen90.open-html-in-browser) を
