@@ -218,4 +218,68 @@ success Building development bundle - 3.291s
 +    "./*": "./*"
 ```
 
+https://localhost:8000
 Hello World!
+
+---
+
+```powershell
+npm init gatsby
+
+Need to install the following packages:
+  create-gatsby
+Ok to proceed? (y) y
+create-gatsby version 1.3.0
+
+
+
+                                                                                                        Welcome to Gatsby!
+
+
+
+This command will generate a new Gatsby site for you in C:\Users\hashi\Documents\GitHub with the setup you select. Let's answer some questions:
+
+
+What would you like to call your site?
+√ · My Gatsby Site
+What would you like to name the folder where your site will be created?
+√ GitHub/ my-gatsby-site
+√ Will you be using a CMS?
+· No (or I'll add it later)
+√ Would you like to install a styling system?
+· No (or I'll add it later)
+√ Would you like to install additional features with other plugins?No items were selected
+
+
+Thanks! Here's what we'll now do:
+
+    Create a new Gatsby site in the folder my-gatsby-site
+
+√ Shall we do this? (Y/n) · Yes
+√ Created site from template
+√ Installed Gatsby
+√ Installed plugins
+√ Created site in my-gatsby-site
+Your new Gatsby site My Gatsby Site has been successfully created
+at C:\Users\hashi\Documents\GitHub\my-gatsby-site.
+Start by going to the directory with
+
+  cd my-gatsby-site
+
+Start the local development server with
+
+  npm run develop
+
+See all commands at
+
+  https://www.gatsbyjs.com/docs/gatsby-cli/
+```
+
+---
+
+```powershell
+gatsby new gatsby-starter-blog https://github.com/gatsbyjs/gatsby-starter-blog
+cd gatsby-starter-blog
+gatsby develop
+```
+
