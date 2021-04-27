@@ -8,3 +8,4 @@
   * [ ] 変換後文字列が描画されるときの挙動を追う(特にlistner)
 * [ ] BlenderのIME不具合(Micosoft IMEのみ)について調べる
   * 以前のバージョンの Microsoft IME を使う をオンにすることで直る
+* [ ] System Sound Mute
