@@ -10,6 +10,7 @@
 `BOOL`は`YES`か`NO`
 
 `:`のあとが引数
+第二引数以降は`ラベル:引数`
 `[クラスインスタンス メソッド: 引数]`
 
 Objective-Cクラスインスタンスの自動解放
@@ -17,3 +18,17 @@ Objective-Cクラスインスタンスの自動解放
     @autoreleasepool {
     }
 ```
+
+---
+
+NSTextInputClient
+
+> https://developer.apple.com/documentation/appkit/nstextinputclient
+  
+> テキストインプットマネジメントシステムとインタラクトするためにテキストビューが実装しなければならないメソッドのセット
+
+---
+
+> [IMEを使う（macOS編） - Qiita](https://qiita.com/496_/items/4ad166f4104d0bb24e80)
+
+> [Cocoa で独自の Text View を実装する](https://metareal.blog/2008/11/08/cocoa-custom-text-view/)
