@@ -91,3 +91,108 @@ bpy.context.space_data.search_filter = ""
 ```
 
 interfaceの変更点を確認して，このパッチだと，IME処理をどのように進めているのか理解する必要があります．
+
+---
+
+2021-04-29 17:48:37
+
+`intern\ghost\intern\GHOST_SystemWin32.cpp`
+
+Windows API で定義されたメッセージ
+ウィンドウからアプリケーションへ送信されたメッセージにしたがって処理を行う
+```cpp
+LRESULT WINAPI GHOST_SystemWin32::s_wndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+  /* ... */
+WM_IME_SETCONTEXT // ウィンドウアクティブ時に送信
+
+WM_IME_STARTCOMPOSITION // コンポジション文字列生成前に送信
+  // m_dataにeventImeDataを追加したGHOST_kEventImeCompositionStartイベント追加
+
+WM_IME_COMPOSITION // コンポジション状態変更時に送信
+  // m_dataにeventImeDataを追加したGHOST_kEventImeCompositionイベント追加
+
+WM_IME_ENDCOMPOSITION // コンポジション終了時に送信
+  // m_dataにeventImeDataを追加したGHOST_kEventImeCompositionEndイベント追加
+/* ... */
+}
+```
+[入力方式マネージャーのメッセージ - Win32 apps | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/win32/intl/input-method-manager-messages)
+[WM_IME_SETCONTEXT メッセージ (Winuser. h) - Win32 apps | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/win32/intl/wm-ime-setcontext)
+[WM_IME_STARTCOMPOSITION メッセージ (Winuser. h) - Win32 apps | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/win32/intl/wm-ime-startcomposition)
+[WM_IME_ENDCOMPOSITION メッセージ (Winuser. h) - Win32 apps | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/win32/intl/wm-ime-endcomposition)
+
+`s_wndProc`は`lpfnWndProc`に代入すると，ウィンドウから送られるメッセージを処理してくれる．
+
+---
+
+アプリケーション(Ghost)の処理
+
+`source\blender\windowmanager\intern\wm_event_system.c`
+
+```cpp
+/**
+ * Windows store own event queues #wmWindow.event_queue (no #bContext here).
+ */
+void wm_event_add_ghostevent(wmWindowManager *wm, wmWindow *win, int type, void *customdata)
+{
+  /* ... */
+GHOST_kEventImeCompositionStart
+  // win->ime_dataにcustomdataを追加して，WM_IME_COMPOSITE_STARTイベントを追加
+GHOST_kEventImeComposition
+  // WM_IME_COMPOSITE_EVENTイベントを追加
+GHOST_kEventImeCompositionEnd
+  // WM_IME_COMPOSITE_ENDイベントを追加
+  /* ... */
+}
+```
+
+UIボタンでのIMEテキスト編集の処理
+`source\blender\editors\interface\interface_handlers.c`
+```cpp
+static void ui_do_but_textedit(
+    bContext *C, uiBlock *block, uiBut *but, uiHandleButtonData *data, const wmEvent *event)
+{
+  /* ... */
+WM_IME_COMPOSITE_START
+  // 選択範囲の削除
+WM_IME_COMPOSITE_EVENT
+  // data->strにime_data->str_resultテキスト挿入
+  // IME確定変換文字列(str_result)のみで，変換中文字列(str_composite)は描画処理のみ
+WM_IME_COMPOSITE_END
+  /* ... */
+}
+```
+
+UIボタンでのIME変換中文字列，カーソル，下線の描画
+`source\blender\editors\interface\interface_widgets.c`
+
+
+```cpp
+static void widget_draw_text(const uiFontStyle *fstyle,
+                             const uiWidgetColors *wcol,
+                             uiBut *but,
+                             rcti *rect)
+{
+  /* ... */
+
+      /* FIXME, IME is modifying 'const char *drawstr! */
+      ime_data = ui_but_ime_data_get(but);
+      // but->active->window->ime_dataを取得
+
+      if (ime_data && ime_data->composite_len) {
+        /* insert composite string into cursor pos */
+        BLI_snprintf((char *)drawstr,
+                     UI_MAX_DRAW_STR,
+                     "%s%s%s",
+                     but->editstr,
+                     ime_data->str_composite,
+                     but->editstr + but->pos);
+      }
+  /* ... */
+}
+```
+
+---
+
+`ui_textedit_begin`と`ui_textedit_end`時のIME有効/無効処理
