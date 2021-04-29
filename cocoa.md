@@ -19,6 +19,29 @@ Objective-Cクラスインスタンスの自動解放
     }
 ```
 
+
+[sharedApplication | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nsapplication/1428360-sharedapplication)
+
+[setActivationPolicy: | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nsapplication/1428621-setactivationpolicy?language=objc)
+
+[initWithContentRect:styleMask:backing:defer: | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nswindow/1419477-initwithcontentrect?language=objc)
+
+[NSMakeRect(_:_:_:_:) | Apple Developer Documentation](https://developer.apple.com/documentation/foundation/1391329-nsmakerect)
+
+[NSWindowStyleMask | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nswindowstylemask?language=objc)
+
+[NSBackingStoreType | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nsbackingstoretype?language=objc)
+
+[cascadeTopLeftFromPoint: | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nswindow/1419392-cascadetopleftfrompoint?language=objc)
+
+[makeKeyAndOrderFront(_:) | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nswindow/1419208-makekeyandorderfront)
+
+[activateIgnoringOtherApps: | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nsapplication/1428468-activateignoringotherapps?language=objc)
+
+[(旧) Cocoaの日々: ウィンドウを前へ、前へ、一番前へ](http://xcatsan.blogspot.com/2009/02/blog-post_12.html)
+
+[run | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nsapplication/1428631-run?language=objc)
+
 ---
 
 NSTextInputClient
