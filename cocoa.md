@@ -55,3 +55,11 @@ NSTextInputClient
 > [IMEを使う（macOS編） - Qiita](https://qiita.com/496_/items/4ad166f4104d0bb24e80)
 
 > [Cocoa で独自の Text View を実装する](https://metareal.blog/2008/11/08/cocoa-custom-text-view/)
+
+> [NSTextInputClient | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nstextinputclient/)
+
+> [マルチプラットフォームでIME対応させたいメモ - Qiita](https://qiita.com/shibukawa/items/add9a4bb1b1f959aa1fb)
+
+> [glfwマルチプラットフォームでのIME対応の困りごとまとめ - Qiita](https://qiita.com/shibukawa/items/54334954b755e16a0863)
+
+> [Mac/API/NSTextInputClientメモ - wxStyledTextCtrlでの日本語入力 @ ウィキ - atwiki（アットウィキ）](https://w.atwiki.jp/wximsupport/pages/35.html)
