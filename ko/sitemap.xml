@@ -2,117 +2,117 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/ko/ko/archive/</loc>
+    <loc>https://ashimotonoyuki.com/ko/ko/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/ko/</loc>
+    <loc>https://ashimotonoyuki.com/ko/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/ja/"
+                href="https://ashimotonoyuki.com/ja/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/"
+                href="https://ashimotonoyuki.com/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/"
+                href="https://ashimotonoyuki.com/ko/"
                 />
   </url><url>
-    <loc>http://example.org/ko/ko/</loc>
+    <loc>https://ashimotonoyuki.com/ko/ko/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/ko/"
+                href="https://ashimotonoyuki.com/en/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/ko/"
+                href="https://ashimotonoyuki.com/ko/ko/"
                 />
   </url><url>
-    <loc>http://example.org/ko/ko/about/</loc>
+    <loc>https://ashimotonoyuki.com/ko/ko/about/</loc>
     <lastmod>2019-10-09T11:44:14+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/ko/ko/gallery/photo/</loc>
+    <loc>https://ashimotonoyuki.com/ko/ko/gallery/photo/</loc>
     <lastmod>2018-10-12T10:20:16+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/ko/ko/gallery/cartoon/</loc>
+    <loc>https://ashimotonoyuki.com/ko/ko/gallery/cartoon/</loc>
     <lastmod>2018-10-11T10:20:16+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/ko/categories/</loc>
+    <loc>https://ashimotonoyuki.com/ko/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/ja/categories/"
+                href="https://ashimotonoyuki.com/ja/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/categories/"
+                href="https://ashimotonoyuki.com/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/categories/"
+                href="https://ashimotonoyuki.com/ko/categories/"
                 />
   </url><url>
-    <loc>http://example.org/ko/tags/index/</loc>
+    <loc>https://ashimotonoyuki.com/ko/tags/index/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/ja/tags/index/"
+                href="https://ashimotonoyuki.com/ja/tags/index/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/tags/index/"
+                href="https://ashimotonoyuki.com/en/tags/index/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/tags/index/"
+                href="https://ashimotonoyuki.com/ko/tags/index/"
                 />
   </url><url>
-    <loc>http://example.org/ko/ko/posts/</loc>
+    <loc>https://ashimotonoyuki.com/ko/ko/posts/</loc>
   </url><url>
-    <loc>http://example.org/ko/series/</loc>
+    <loc>https://ashimotonoyuki.com/ko/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/ja/series/"
+                href="https://ashimotonoyuki.com/ja/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/series/"
+                href="https://ashimotonoyuki.com/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/series/"
+                href="https://ashimotonoyuki.com/ko/series/"
                 />
   </url><url>
-    <loc>http://example.org/ko/tags/</loc>
+    <loc>https://ashimotonoyuki.com/ko/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/ja/tags/"
+                href="https://ashimotonoyuki.com/ja/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/tags/"
+                href="https://ashimotonoyuki.com/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/tags/"
+                href="https://ashimotonoyuki.com/ko/tags/"
                 />
   </url>
 </urlset>

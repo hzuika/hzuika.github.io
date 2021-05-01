@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Hugo Zzo Theme</title>
-    <link>http://example.org/en/en/</link>
+    <link>https://ashimotonoyuki.com/en/en/</link>
     <description>Recent content on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 25 Jan 2020 06:40:51 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/en/en/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ashimotonoyuki.com/en/en/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Posts</title>
-        <link>http://example.org/en/en/posts/</link>
+        <link>https://ashimotonoyuki.com/en/en/posts/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         
-        <guid>http://example.org/en/en/posts/</guid>
+        <guid>https://ashimotonoyuki.com/en/en/posts/</guid>
         <description></description>
         
         <dc:creator>Hugo Authors</dc:creator>
@@ -46,11 +46,11 @@
       
       <item>
         <title>Showcase overview</title>
-        <link>http://example.org/en/en/showcase/</link>
+        <link>https://ashimotonoyuki.com/en/en/showcase/</link>
         <pubDate>Sun, 19 Jan 2020 15:43:38 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Sun, 19 Jan 2020 15:43:38 +0900</atom:modified>
-        <guid>http://example.org/en/en/showcase/</guid>
+        <guid>https://ashimotonoyuki.com/en/en/showcase/</guid>
         <description></description>
         
         <dc:creator>zzossig</dc:creator>
@@ -64,15 +64,15 @@
       
       <item>
         <title>Cartoon</title>
-        <link>http://example.org/en/en/gallery/cartoon/</link>
+        <link>https://ashimotonoyuki.com/en/en/gallery/cartoon/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>http://example.org/en/en/gallery/cartoon/</guid>
+        <guid>https://ashimotonoyuki.com/en/en/gallery/cartoon/</guid>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>zzossig</dc:creator>
-        <media:content url="http://example.orgimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://ashimotonoyuki.comimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -82,15 +82,15 @@
       
       <item>
         <title>Photo</title>
-        <link>http://example.org/en/en/gallery/photo/</link>
+        <link>https://ashimotonoyuki.com/en/en/gallery/photo/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>http://example.org/en/en/gallery/photo/</guid>
+        <guid>https://ashimotonoyuki.com/en/en/gallery/photo/</guid>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>zzossig</dc:creator>
-        <media:content url="http://example.orgimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://ashimotonoyuki.comimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -100,11 +100,11 @@
       
       <item>
         <title>Presentations</title>
-        <link>http://example.org/en/en/presentation/</link>
+        <link>https://ashimotonoyuki.com/en/en/presentation/</link>
         <pubDate>Wed, 30 Oct 2019 20:48:10 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         
-        <guid>http://example.org/en/en/presentation/</guid>
+        <guid>https://ashimotonoyuki.com/en/en/presentation/</guid>
         <description></description>
         
         <dc:creator>zzossig</dc:creator>
@@ -118,11 +118,11 @@
       
       <item>
         <title>Archive</title>
-        <link>http://example.org/en/en/archive/</link>
+        <link>https://ashimotonoyuki.com/en/en/archive/</link>
         <pubDate>Sat, 19 Oct 2019 11:44:14 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Sat, 19 Oct 2019 11:44:14 +0900</atom:modified>
-        <guid>http://example.org/en/en/archive/</guid>
+        <guid>https://ashimotonoyuki.com/en/en/archive/</guid>
         <description>archive page</description>
         
         <dc:creator>zzossig</dc:creator>
@@ -136,11 +136,11 @@
       
       <item>
         <title>About</title>
-        <link>http://example.org/en/en/about/</link>
+        <link>https://ashimotonoyuki.com/en/en/about/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Thu, 28 Feb 2019 00:00:00 +0000</atom:modified>
-        <guid>http://example.org/en/en/about/</guid>
+        <guid>https://ashimotonoyuki.com/en/en/about/</guid>
         <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
 Hugo makes use of a variety of open source projects including:
  https://github.</description>

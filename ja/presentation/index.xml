@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Presentations on Hugo Zzo Theme</title>
-    <link>http://example.org/ja/presentation/</link>
+    <link>https://ashimotonoyuki.com/ja/presentation/</link>
     <description>Recent content in Presentations on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -16,21 +16,21 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 30 Oct 2019 20:48:10 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/ja/presentation/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ashimotonoyuki.com/ja/presentation/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Fourth</title>
-        <link>http://example.org/ja/presentation/dir/fourth/</link>
+        <link>https://ashimotonoyuki.com/ja/presentation/dir/fourth/</link>
         <pubDate>Wed, 30 Oct 2019 20:48:10 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Wed, 30 Oct 2019 20:48:10 +0900</atom:modified>
-        <guid>http://example.org/ja/presentation/dir/fourth/</guid>
+        <guid>https://ashimotonoyuki.com/ja/presentation/dir/fourth/</guid>
         <description></description>
         
         <dc:creator>zzossig</dc:creator>
-        <media:content url="http://example.orgimages/feature1/number-four.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://ashimotonoyuki.comimages/feature1/number-four.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -52,15 +52,15 @@
       
       <item>
         <title>Third</title>
-        <link>http://example.org/ja/presentation/third/</link>
+        <link>https://ashimotonoyuki.com/ja/presentation/third/</link>
         <pubDate>Wed, 30 Oct 2019 20:46:30 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Wed, 30 Oct 2019 20:46:30 +0900</atom:modified>
-        <guid>http://example.org/ja/presentation/third/</guid>
+        <guid>https://ashimotonoyuki.com/ja/presentation/third/</guid>
         <description></description>
         
         <dc:creator>zzossig</dc:creator>
-        <media:content url="http://example.orgimages/feature1/number-three.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://ashimotonoyuki.comimages/feature1/number-three.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -82,15 +82,15 @@
       
       <item>
         <title>Second</title>
-        <link>http://example.org/ja/presentation/second/</link>
+        <link>https://ashimotonoyuki.com/ja/presentation/second/</link>
         <pubDate>Wed, 30 Oct 2019 20:45:24 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Wed, 30 Oct 2019 20:45:24 +0900</atom:modified>
-        <guid>http://example.org/ja/presentation/second/</guid>
+        <guid>https://ashimotonoyuki.com/ja/presentation/second/</guid>
         <description></description>
         
         <dc:creator>zzossig</dc:creator>
-        <media:content url="http://example.orgimages/feature1/number-two.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://ashimotonoyuki.comimages/feature1/number-two.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -112,15 +112,15 @@
       
       <item>
         <title>First</title>
-        <link>http://example.org/ja/presentation/first/</link>
+        <link>https://ashimotonoyuki.com/ja/presentation/first/</link>
         <pubDate>Wed, 30 Oct 2019 19:45:20 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Wed, 30 Oct 2019 19:45:20 +0900</atom:modified>
-        <guid>http://example.org/ja/presentation/first/</guid>
+        <guid>https://ashimotonoyuki.com/ja/presentation/first/</guid>
         <description></description>
         
         <dc:creator>zzossig</dc:creator>
-        <media:content url="http://example.orgimages/feature1/number-one.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://ashimotonoyuki.comimages/feature1/number-one.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

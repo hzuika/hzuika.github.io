@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Galleries on Hugo Zzo Theme</title>
-    <link>http://example.org/ja/gallery/</link>
+    <link>https://ashimotonoyuki.com/ja/gallery/</link>
     <description>Recent content in Galleries on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -16,21 +16,21 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/ja/gallery/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ashimotonoyuki.com/ja/gallery/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Cartoon</title>
-        <link>http://example.org/ja/gallery/cartoon/</link>
+        <link>https://ashimotonoyuki.com/ja/gallery/cartoon/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>http://example.org/ja/gallery/cartoon/</guid>
+        <guid>https://ashimotonoyuki.com/ja/gallery/cartoon/</guid>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>zzossig</dc:creator>
-        <media:content url="http://example.orgimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://ashimotonoyuki.comimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -40,15 +40,15 @@
       
       <item>
         <title>Photo</title>
-        <link>http://example.org/ja/gallery/photo/</link>
+        <link>https://ashimotonoyuki.com/ja/gallery/photo/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>zzossig@gmail.com (zzossig)</author>
         <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>http://example.org/ja/gallery/photo/</guid>
+        <guid>https://ashimotonoyuki.com/ja/gallery/photo/</guid>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>zzossig</dc:creator>
-        <media:content url="http://example.orgimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://ashimotonoyuki.comimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
