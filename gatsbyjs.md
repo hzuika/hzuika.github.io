@@ -283,3 +283,138 @@ cd gatsby-starter-blog
 gatsby develop
 ```
 
+---
+
+2021-05-01 01:59:58
+[Set Up Your Development Environment | Gatsby](https://www.gatsbyjs.com/docs/tutorial/part-zero/)
+
+```
+npm --version
+7.11.1
+gatsby --version
+Gatsby CLI version: 3.3.0
+```
+
+拡張機能のインストール
+```
+code --install-extension esbenp.prettier-vscode
+```
+
+[Gatsby + Markdownでブログを作り直しました](https://diff001a.netlify.app/gatsby-blog-with-markdown/)
+
+cd .\gatsby-starter-blog\
+gatsby develop
+http://localhost:8000/
+npm install --save gatsby-remark-prismjs prismjs gatsby-remark-katex katex
+
+[Test Site - GatsbyJSでブログを作った時のメモ](https://brainvader.github.io/brain-space/blog/2019/04/post-001/)
+
+gatsby new gatsby-starter-lumen https://github.com/alxshelepenok/gatsby-starter-lumen
+
+
+---
+
+2021-05-01 09:36:29
+katex が表示されないのでチュートリアルから始めていく．
+
+2021-05-01 09:36:00
+
+`gatsby new gatsby-hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`
+`cd gatsby-hello-world`
+`gatsby develop`
+
+```
+(node:19316) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./" in the "exports" field module resolution of the package at
+D:\src\gatsby-hello-world\node_modules\postcss\package.json.
+Update this package.json to use a subpath pattern like "./*".
+(Use `node --trace-deprecation ...` to show where the warning was created)
+```
+
+```diff
+-   "./": "./"
++   "./*": "./*"
+```
+
+`src/pages/index.js`の`Home()`の戻り値のHTMLを変更することで，コンテンツを変えられる．
+
+index.jsはjsxの書き方
+
+新規ページは`src/pages`の中に作る．
+
+使いまわす部分は`src/components`を新規作成し，その中に関数とともに入れる．
+使いたいところでは`import`したのち，HTMLタグのように書く．
+
+使いまわす関数は，引数を使うことで，タグのプロパティ値を使って変更が可能．
+
+リンクを使うためには `Link` をインポートして，`Link`タグを使う．
+
+[Introduction to Styling in Gatsby | Gatsby](https://www.gatsbyjs.com/docs/tutorial/part-two/)
+
+`./gatsby-browser.js`でインポートしたcssファイルはすべてのページに適用される．
+
+component-scoped CSSを使用して，特定のページにのみcssを適用する
+
+[Creating Nested Layout Components | Gatsby](https://www.gatsbyjs.com/docs/tutorial/part-three/)
+
+インストールパッケージがサポートしているバージョンとプロジェクトのバージョンの対応
+最新版reactだとエラーになる．
+`--save --legacy-peer-deps`オプションを使うか，reactのバージョンを下げる．
+
+```
+npm install gatsby-plugin-typography react-typography typography typography-theme-fairy-gates --save --legacy-peer-deps
+```
+
+`gatsby-config.js`を編集する．
+
+typographyプラグインは Configuration File を必要とする．
+
+`components/layout.js` でテンプレートを作る．
+
+---
+
+[Data in Gatsby | Gatsby](https://www.gatsbyjs.com/docs/tutorial/part-four/)
+
+```powershell
+npm install gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/react --save --legacy-peer-deps
+```
+
+---
+
+[Source Plugins | Gatsby](https://www.gatsbyjs.com/docs/tutorial/part-five/)
+
+npm install gatsby-source-filesystem
+
+gatsby-config.js を編集
+
+graphqlのqueryでdataとして取得できる．
+
+---
+
+2021-05-01 18:13:54
+
+[Transformer plugins | Gatsby](https://www.gatsbyjs.com/docs/tutorial/part-six/)
+
+markdown ファイルを作成
+
+npm install gatsby-transformer-remark
+
+GraphQLのオートコンプリートが確認できる．
+
+追加したmarkdownファイルをGraphQLのqueryで取得できる．
+
+---
+
+[Programmatically create pages from data | Gatsby](https://www.gatsbyjs.com/docs/tutorial/part-seven/)
+
+一番上の階層に作成した`./gatsby-node.js`で，スラグ(URLの識別部分)を作成
+
+`./src/templates/blog-post.js`でmarkdownをどのようにhtmlに変換するか記述
+
+---
+
+[gatsby-remark-katex | Gatsby](https://www.gatsbyjs.com/plugins/gatsby-remark-katex/)
+
+
+`npm install gatsby-transformer-remark gatsby-remark-katex katex`
+
+数式が表示されなかった．
