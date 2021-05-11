@@ -8,7 +8,13 @@ https://developer.apple.com/documentation/appkit/nstextinput
 
 https://developer.apple.com/documentation/appkit/nstextinputclient
 
+https://github.com/blender/blender/blob/master/intern/ghost/intern/GHOST_WindowViewCocoa.h
+
+
 
 # GitHub で tag はどのように使うの?
+## iOS Chrome の GitHub でファイルを直接編集した時のコミットには tag をつけられない
 
 # Google の拡張機能はどうやって自作するの?
+
+# スマートフォンでテキストファイルを編集できる最も良い方法は?
