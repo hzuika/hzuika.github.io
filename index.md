@@ -1,5 +1,6 @@
 # なぜ Mac の Blender は日本語入力ができないの?
 
+## Markded Text は下線を引くなど、修飾を行うテキスト
 ## Reference
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/TextUILayer/Tasks/CreatingATextView.html
