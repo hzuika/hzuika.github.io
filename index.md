@@ -28,3 +28,5 @@ https://github.com/blender/blender/blob/594f47ecd2d5367ca936cf6fc6ec8168c2b360d0
 ## Reference
 [【令和最新版】文献管理ソフト Zoteroのすゝめ｜SD｜note](https://note.com/sdeso/n/n013952313c1b)
 ## 行間隔がもう少し広いフォントに変える．
+
+# R言語を VScode で使う方法は?
