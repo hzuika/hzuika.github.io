@@ -23,3 +23,6 @@ https://github.com/blender/blender/blob/594f47ecd2d5367ca936cf6fc6ec8168c2b360d0
 
 # 正規分布をsvgで描く方法は?
 ## 正規分布をベジエ曲線で描く方法は?
+
+# Zotero のメモのフォントを変える方法は?
+## 行間隔がもう少し広いフォントに変える．
