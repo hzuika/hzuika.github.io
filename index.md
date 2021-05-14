@@ -27,6 +27,8 @@ https://github.com/blender/blender/blob/594f47ecd2d5367ca936cf6fc6ec8168c2b360d0
 
 [Mac/API/NSTextInputClientメモ - wxStyledTextCtrlでの日本語入力 @ ウィキ - atwiki（アットウィキ）](https://w.atwiki.jp/wximsupport/pages/35.html)
 
+https://github.com/blender/blender/commit/4c43a14b9f61e9e8a049299278773699fc6d7b1d
+
 # GitHub で tag はどのように使うの?
 ## iOS Chrome の GitHub でファイルを直接編集した時のコミットには tag をつけられない
 
