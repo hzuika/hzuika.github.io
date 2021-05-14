@@ -15,6 +15,8 @@ https://github.com/blender/blender/blob/594f47ecd2d5367ca936cf6fc6ec8168c2b360d0
 
 https://github.com/blender/blender/blob/594f47ecd2d5367ca936cf6fc6ec8168c2b360d0/intern/ghost/intern/GHOST_WindowCocoa.mm#L366
 
+[Implement NSTextInputClient protocol for IME · godotengine/godot@8aa86cb](https://github.com/godotengine/godot/commit/8aa86cb9bcb5db8a1909d4b1595e90dbffbff11e)
+
 # GitHub で tag はどのように使うの?
 ## iOS Chrome の GitHub でファイルを直接編集した時のコミットには tag をつけられない
 
