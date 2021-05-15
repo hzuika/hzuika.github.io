@@ -53,3 +53,5 @@ https://github.com/blender/blender/commit/4c43a14b9f61e9e8a049299278773699fc6d7b
 whichが名詞の代わりになりながら、後の文と合わせて修飾文にする。
 前置詞inは名詞の前に置きたいので、名詞の代わりのwhichの前に置く。
 
+
+# as は when より同時に起こっている感じが強い
