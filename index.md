@@ -11,6 +11,8 @@ https://developer.apple.com/documentation/appkit/nstextinput
 
 https://developer.apple.com/documentation/appkit/nstextinputclient
 
+https://developer.apple.com/library/archive/documentation/TextFonts/Conceptual/CocoaTextArchitecture/TextEditing/TextEditing.html
+
 https://github.com/blender/blender/blob/master/intern/ghost/intern/GHOST_WindowViewCocoa.h
 
 https://github.com/blender/blender/blob/594f47ecd2d5367ca936cf6fc6ec8168c2b360d0/intern/ghost/intern/GHOST_WindowCocoa.mm#L285
