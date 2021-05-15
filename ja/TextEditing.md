@@ -1,6 +1,6 @@
 [Text Editing](https://developer.apple.com/library/archive/documentation/TextFonts/Conceptual/CocoaTextArchitecture/TextEditing/TextEditing.html#//apple_ref/doc/uid/TP40009459-CH3-SW1)
 # テキスト編集
-この章では、Cocoaテキストシステムが、テキスト編集を実行する時の動作を制御する方法を説明します。
+この章では、Cocoaテキストシステムのテキスト編集実行時の動作を制御する方法を説明します。
 テキスト編集とはテキストオブジェクトを操作して、テキストの文字や属性を変更することです。
 編集は普通、直接ユーザーがテキストビューでアクションする事で実行されます。
 しかし、テキストストレージオブジェクトのプログラムによる操作によっても実行できます。
