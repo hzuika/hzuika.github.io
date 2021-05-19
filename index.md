@@ -36,13 +36,14 @@ https://github.com/blender/blender/commit/4c43a14b9f61e9e8a049299278773699fc6d7b
 [vimr/notes-on-cocoa-text-input.md at dd66d8e966c4935c4773045429ee5a5bd1e56f84 · qvacua/vimr](https://github.com/qvacua/vimr/blob/dd66d8e966c4935c4773045429ee5a5bd1e56f84/docs/notes-on-cocoa-text-input.md)
 
 [chromium/index.md at d7da0240cae77824d1eda25745c4022757499131 · chromium/chromium](https://github.com/chromium/chromium/blob/d7da0240cae77824d1eda25745c4022757499131/docs/ui/input_event/index.md#L241)
+[MacViews: Implement text input. · chromium/chromium@0282b03](https://github.com/chromium/chromium/commit/0282b03c86d52533c58af2c6e8de4c7bc7a89155)
+
 
 [xi-mac/frontend.md at 6ce150ab185c3a5058d1440b6972c4a4fe252201 · xi-editor/xi-mac](https://github.com/xi-editor/xi-mac/blob/6ce150ab185c3a5058d1440b6972c4a4fe252201/doc/frontend.md)
 
 [CocoaProgrammaticHowtoCollection/README.md at 2a2611cc751a1a7784570efae57e86adf40c29bb · eonil/CocoaProgrammaticHowtoCollection](https://github.com/eonil/CocoaProgrammaticHowtoCollection/blob/2a2611cc751a1a7784570efae57e86adf40c29bb/README.md)
 
 [About the Cocoa Text System](https://developer.apple.com/library/archive/documentation/TextFonts/Conceptual/CocoaTextArchitecture/Introduction/Introduction.html)
-
 
 
 # GitHub で tag はどのように使うの?
