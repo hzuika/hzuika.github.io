@@ -11,6 +11,11 @@ NSUnderline 1が細い下線，2が太い下線
 
 NSMarkedClauseSegment が変換単位
 
+IME OFF中はsetMarkedTextが呼ばれない．
+
+IME 変換確定時(Enterを押したとき)にinsertTextが呼ばれる．
+insertTextはIME OFF中も呼ばれる．
+
 ## Reference
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/TextUILayer/Tasks/CreatingATextView.html
