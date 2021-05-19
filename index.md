@@ -83,7 +83,7 @@ https://github.com/blender/blender/commit/4c43a14b9f61e9e8a049299278773699fc6d7b
 
 [About the Cocoa Text System](https://developer.apple.com/library/archive/documentation/TextFonts/Conceptual/CocoaTextArchitecture/Introduction/Introduction.html)
 
-
+# Blender の cpp ファイルではstd::coutが使えないのでprintfを使ったほうが無難．
 # GitHub で tag はどのように使うの?
 ## iOS Chrome の GitHub でファイルを直接編集した時のコミットには tag をつけられない
 
