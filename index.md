@@ -18,6 +18,12 @@ insertTextはIME OFF中も呼ばれる．
 
 blender の insertText はIME OFF時でも呼ばれていない
 
+blender実行中
+```
+2021-05-20 03:05:25.268 Blender[13677:888528] *** ProcessInputSourceSwitchEventCandidate - Japanese IM (<TSMInputSource 0x119614b00> Input Mode: com.apple.inputmethod.Japanese (Parent = com.apple.inputmethod.Kotoeri.RomajiTyping)) is not handling inEventKind(1) inKeyCode(104)*** BAIL kana/eisu handling
+```
+
+
 ## Reference
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/TextUILayer/Tasks/CreatingATextView.html
