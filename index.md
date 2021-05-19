@@ -38,7 +38,22 @@ blender実行中
 2021-05-20 03:05:25.268 Blender[13677:888528] *** ProcessInputSourceSwitchEventCandidate - Japanese IM (<TSMInputSource 0x119614b00> Input Mode: com.apple.inputmethod.Japanese (Parent = com.apple.inputmethod.Kotoeri.RomajiTyping)) is not handling inEventKind(1) inKeyCode(104)*** BAIL kana/eisu handling
 ```
 
+WM_IME_SETCONTEXT メッセージのタイミング
+* blenderウィンドウがアクティブ(画面内クリック)
+* blenderウィンドウが非アクティブ(画面外クリック)
+* UIボタンの日本語入力確定後のさらに次のEnterでフォーカスがUIボタンから外れた時2回
 
+WM_IME_STARTCOMPOSITION メッセージのタイミング
+* IME ONで最初にキーを押したとき．
+
+WM_IME_COMPOSITION メッセージのタイミング
+* 押し初めに3回
+* 二文字目から2回
+* BackSpaceで文字が残っていると2回，なくなると1回
+* 矢印キーで1回
+
+WM_END_COMPOSITION メッセージのタイミング
+* 変換前文字がなくなるとき
 
 ## Reference
 
