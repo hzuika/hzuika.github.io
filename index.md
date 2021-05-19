@@ -5,6 +5,8 @@
 ## `setMarkedText` と `insertText` の違い
 MarkedTextが変更される可能性のあるテキスト（composing text)で，insertTextは確定後のテキスト
 
+keyDown メソッドで送られてくるイベントはIMEがOFFでもONでも同じである．
+
 ## Reference
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/TextUILayer/Tasks/CreatingATextView.html
