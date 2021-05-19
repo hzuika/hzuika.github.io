@@ -16,6 +16,8 @@ IME OFF中はsetMarkedTextが呼ばれない．
 IME 変換確定時(Enterを押したとき)にinsertTextが呼ばれる．
 insertTextはIME OFF中も呼ばれる．
 
+blender の insertText はIME OFF時でも呼ばれていない
+
 ## Reference
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/TextUILayer/Tasks/CreatingATextView.html
