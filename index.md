@@ -19,7 +19,9 @@ https://github.com/blender/blender/blob/594f47ecd2d5367ca936cf6fc6ec8168c2b360d0
 
 https://github.com/blender/blender/blob/594f47ecd2d5367ca936cf6fc6ec8168c2b360d0/intern/ghost/intern/GHOST_WindowCocoa.mm#L366
 
+Godot は GLFW のソースコードをもとにしているらしい．
 [Implement NSTextInputClient protocol for IME · godotengine/godot@8aa86cb](https://github.com/godotengine/godot/commit/8aa86cb9bcb5db8a1909d4b1595e90dbffbff11e)
+[Add IME support (macOS) by bruvzg · Pull Request #10142 · godotengine/godot](https://github.com/godotengine/godot/pull/10142)
 
 [マルチプラットフォームでIME対応させたいメモ - Qiita](https://qiita.com/shibukawa/items/add9a4bb1b1f959aa1fb)
 
