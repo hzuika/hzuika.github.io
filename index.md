@@ -71,6 +71,9 @@ WM_END_COMPOSITION メッセージのタイミング
 Google 日本語入力の場合，
 * GHOST_kEventImeComposition は1回だけ
 
+## NSTextInputClientプロトコルで実装した関数はどの順番で呼ばれているのか?
+## selection range はどこなのか?
+
 
 ## Reference
 
