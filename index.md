@@ -66,7 +66,11 @@ WM_END_COMPOSITION メッセージのタイミング
 最初に入力したとき，
 * GHOST_kEventImeComposition 
 が3回ではなく，1回だけ．
-半角で入力されてから，IME入力が始まる．
+エラー 半角で入力されてから，IME入力が始まる．
+
+Google 日本語入力の場合，
+* GHOST_kEventImeComposition は1回だけ
+
 
 ## Reference
 
