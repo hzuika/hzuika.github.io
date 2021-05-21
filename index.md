@@ -185,6 +185,76 @@ GHOST_kEventKeyDown, i
 GHOST_kEventKeyDown, i
 ```
 
+---
+
+
+#### Old Microsoft IME
+```
+WM_INPUT
+WM_INPUT
+
+WM_INPUT
+GHOST_kEventKeyDown, i
+WM_INPUT
+```
+#### New Microsoft IME
+```
+WM_INPUT
+GHOST_kEventKeyDown, a
+WM_INPUT
+
+WM_INPUT
+GHOST_kEventKeyDown, i
+WM_INPUT
+```
+
+#### Google 日本語入力
+```
+WM_INPUT
+WM_INPUT
+
+WM_INPUT
+GHOST_kEventKeyDown, i
+WM_INPUT
+```
+
+---
+
+Google 日本語入力も WM_INPUT で utf8_char の a は入力されている．
+
+WM_IME_STARTCOMPOSITION の通知が来たら， GHOST_kEventKeyDown を消している．
+Google 日本語入力と Old Microsoft IME では GHOST_kEventKeyDown より前にこれが行われているのでOK
+New Microsoft IME では GHOST_kEventKeyDown の後に WM_IME_STARTCOMPOSITION が来ているのでKeyDownが消されずに通過してしまう．
+```cpp
+// GHOST_SystemWin32.cpp
+        case WM_IME_STARTCOMPOSITION: {
+          printf("WM_IME_STARTCOMPOSITION\n");
+          GHOST_ImeWin32 *ime = window->getImeInput();
+          eventHandled = true;
+          /* remove input event before start comp event, avoid redundant input */
+          eventManager->removeTypeEvents(GHOST_kEventKeyDown, window);
+          ime->CreateImeWindow(hwnd);
+          ime->ResetComposition(hwnd);
+          event = processImeEvent(GHOST_kEventImeCompositionStart, window, &ime->eventImeData);
+          break;
+        }
+```
+
+A 半角英数(直接入力)
+IME ON から OFF にすると設定が変わらない?
+fullshape hiragana native roman
+fullshape hiragana native
+fullshape katakana native
+fullshape hiragana alphanumeric
+halfshape katakana native
+halfshape hiragana alphanumeric roman
+halfshape hiragana alphanumeric
+あ
+fullshape hiragana native
+カ
+fullshape katakana native
+ｶ
+halfshape katakana native
 ## Reference
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/TextUILayer/Tasks/CreatingATextView.html
