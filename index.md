@@ -56,20 +56,115 @@ WM_IME_COMPOSITION メッセージのタイミング
 WM_END_COMPOSITION メッセージのタイミング
 * 変換前文字がなくなるとき
 
-旧IMEの場合，
+### 旧IMEの場合，
 * GHOST_kEventImeCompositionStart
 * GHOST_kEventImeComposition 
 * GHOST_kEventImeCompositionEnd
 も同じ数だけ出ている．
 
-新IMEの場合，
+sel_start, sel_end はIMEコンポジション文字列中の変換対象の範囲．（特に下線が太くなる部分)
+Unicodeで表したときのバイト数なので，Asciiが1 byte éなどの拡張ラテン文字が2 byte 日本語がおよそ3 byte
+絵文字が 4 byte (fontが対応していても，blenderでは表示されない．)
+backspaceでコンポジション文字列を全て消すと，sel_startとsel_endはどちらも -1 になる．
+
+```
+WM_IME_STARTCOMPOSITION
+WM_IME_COMPOSITION
+GHOST_kEventImeCompositionStart
+GHOST_kEventImeComposition
+sel_start, 0
+sel_end, 3
+ime composition, あ
+WM_IME_COMPOSITION
+GHOST_kEventImeComposition
+sel_start, 0
+sel_end, 3
+ime composition, あ
+WM_IME_COMPOSITION
+GHOST_kEventImeComposition
+sel_start, 0
+sel_end, 3
+ime composition, あ
+```
+
+最初にIMEで入力したとき 1回目は GHOST_kEventKeyDown イベントが発生しない．
+2文字目以降の入力では 対応するキーの GHOST_kEventKeyDown イベントが発生している．
+ただし，kEventKeyDown イベントによって，半角文字が勝手に入力されることはない．
+
+```
+WM_IME_STARTCOMPOSITION
+WM_IME_COMPOSITION
+GHOST_kEventImeCompositionStart
+GHOST_kEventImeComposition
+ime composition, あ
+WM_IME_COMPOSITION
+GHOST_kEventImeComposition
+ime composition, あ
+WM_IME_COMPOSITION
+GHOST_kEventKeyDown, i
+GHOST_kEventImeComposition
+ime composition, あい
+WM_IME_COMPOSITION
+GHOST_kEventImeComposition
+ime composition, あい
+WM_IME_COMPOSITION
+GHOST_kEventImeComposition
+ime composition, あい
+WM_IME_COMPOSITION
+WM_IME_ENDCOMPOSITION
+GHOST_kEventImeComposition
+GHOST_kEventImeCompositionEnd
+```
+
+
+### 新IMEの場合，
 最初に入力したとき，
 * GHOST_kEventImeComposition 
 が3回ではなく，1回だけ．
 エラー 半角で入力されてから，IME入力が始まる．
+keyDownイベントが発生している?
 
-Google 日本語入力の場合，
+最初にIMEで入力したとき 1回目に GHOST_kEventKeyDown イベントが発生している．
+この文字が最初に入力されている．
+2文字目以降の入力では 対応するキーの GHOST_kEventKeyDown イベントが発生している．
+ただし，kEventKeyDown イベントによって，半角文字が勝手に入力されることはない．
+
+```
+GHOST_kEventKeyDown, a
+WM_IME_STARTCOMPOSITION
+WM_IME_COMPOSITION
+GHOST_kEventImeCompositionStart
+GHOST_kEventImeComposition
+ime composition, あ
+GHOST_kEventKeyDown, i
+WM_IME_COMPOSITION
+GHOST_kEventImeComposition
+ime composition, あい
+GHOST_kEventKeyDown, 
+WM_IME_COMPOSITION
+WM_IME_ENDCOMPOSITION
+GHOST_kEventImeComposition
+GHOST_kEventImeCompositionEnd
+```
+
+### Google 日本語入力の場合，
 * GHOST_kEventImeComposition は1回だけ
+
+```
+WM_IME_STARTCOMPOSITION
+WM_IME_COMPOSITION
+GHOST_kEventImeCompositionStart
+GHOST_kEventImeComposition
+ime composition, あ
+WM_IME_COMPOSITION
+GHOST_kEventKeyDown, i
+GHOST_kEventImeComposition
+ime composition, あい
+WM_IME_COMPOSITION
+WM_IME_ENDCOMPOSITION
+GHOST_kEventImeComposition
+GHOST_kEventImeCompositionEnd
+```
 
 ## NSTextInputClientプロトコルで実装した関数はどの順番で呼ばれているのか?
 ## selection range はどこなのか?
