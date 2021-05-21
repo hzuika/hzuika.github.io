@@ -169,6 +169,21 @@ GHOST_kEventImeCompositionEnd
 ## NSTextInputClientプロトコルで実装した関数はどの順番で呼ばれているのか?
 ## selection range はどこなのか?
 
+## Blender Windows IME
+### 「あい」と入力したときの挙動．
+#### Old Microsoft IME
+```
+GHOST_kEventKeyDown, i
+```
+#### New Microsoft IME
+```
+GHOST_kEventKeyDown, a
+GHOST_kEventKeyDown, i
+```
+#### Google 日本語入力
+```
+GHOST_kEventKeyDown, i
+```
 
 ## Reference
 
