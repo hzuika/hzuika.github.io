@@ -166,6 +166,21 @@ GHOST_kEventImeComposition
 GHOST_kEventImeCompositionEnd
 ```
 
+## Win API を使用してIMEの調査
+### New Microsoft IME
+IME切り替えをキーボードから行うと，ImmGetOpenStatusでON/OFFがわかる．
+しかし，IMEの入力モードのボタン(ツールバー)をクリックして切り替えると変わらない．
+これは，WM_INPUT時でもWM_IME_NOTIFY時でも同じ．
+しかし，クリックしたときに，WM_IME_NOTIFYの通知は来ているので，ここから推定できないものか
+A  の状態でクリックして あ IME_SETOPENSTATUS -> でもGetOpenStatusは変わらないのでは?
+あ の状態でクリックして A  IME_SETCONVERSIONMODE
+それ以降はクリックだと IME_SETCONVERSIONMODE -> GetConversionMode ?
+キーボードによるトグル IME_SETOPENSTATUS
+
+GetKeyState(VK_KANA); はローマ字入力0，かな入力1だった．
+かな入力時も，Aキーで ち を打つと，ﾁち とでてきた．
+
+
 ## NSTextInputClientプロトコルで実装した関数はどの順番で呼ばれているのか?
 ## selection range はどこなのか?
 
