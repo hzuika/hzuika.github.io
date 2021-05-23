@@ -325,6 +325,46 @@ fullshape hiragana native
 fullshape katakana native
 ｶ
 halfshape katakana native
+
+## WM_INPUT と GHOST_kEventKeyDown と WM_IME_STARTCOMPOSITION 速度比較．
+new IME だと GHOST_kEventKeyDown が WM_IME_STARTCOMPOSITION より早い．
+また，WM_IME_startcomposition よりも早い WM_IME_* メッセージは存在しない
+
+```cpp
+        case WM_IME_CHAR: {
+          printf("WM_IME_CHAR\n");
+        }
+        case WM_IME_COMPOSITIONFULL: {
+          printf("WM_IME_COMPOSITIONFULL\n");
+        }
+        case WM_IME_CONTROL: {
+          printf("WM_IME_CONTROL\n");
+        }
+        case WM_IME_KEYDOWN: {
+          printf("WM_IME_KEYDOWN\n");
+        }
+        case WM_IME_KEYUP: {
+          printf("WM_IME_KEYUP\n");
+        }
+        case WM_IME_NOTIFY: {
+          printf("WM_IME_NOTIFY\n");
+        }
+        case WM_IME_REQUEST: {
+          printf("WM_IME_REQUEST\n");
+        }
+        case WM_IME_SELECT: {
+          printf("WM_IME_SELECT\n");
+        }
+```
+
+## 解決
+
+WM_INPUT メッセージを処理するさいに， 日本語IMEがONの場合は， GHOST_kEvnetKeyDown イベントを追加しない (null) にする処理を追加する．
+いや， 文字を null 文字にすればいいか? (安全?)
+でも，結局他のIMEだとGHOSTイベントを消しているのだから，イベントごと，nullにしても問題ないだろう．
+
+次は，バグ報告する．
+
 ## Reference
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/TextUILayer/Tasks/CreatingATextView.html
