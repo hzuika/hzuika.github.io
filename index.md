@@ -18,6 +18,15 @@ IME On はkeyDownイベントで捕捉されない．
 
 [selectedKeyboardInputSource | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource)
 
+https://github.com/miyako/4d-plugin-text-input-context/blob/ec5fc4df26b7e2b381f306aa131132a62486a08c/text-input-context/4DPlugin-Text-Input-Context.cpp#L70
+
+## NSTextInputContext
+keyboardInputSources
+全部のキーボードレイアウト?の取得(IMEで表示されるモード)
+
+selectedKeyboardInputSource
+選択中のキーボードレイアウト(IMEモード)
+
 ## Memo 
 TISCreateInputSourceList はカーボン系の関数?
 
