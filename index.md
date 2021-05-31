@@ -1,4 +1,18 @@
-# なぜ Mac の Blender は日本語入力ができないの?
+# なぜ Mac の Blender は日本語入力ができないのか
+
+macOS から送られてきたインプットメソッドの処理をしていないから．
+
+するべきこと
+* NsTextInputClient プロトコルのメソッドの実装．
+* NsNotification による入力切替の通知によって，keyDownイベントを分岐させる．
+* mac IME を処理するためのクラスを作ったほうがいいかもしれない．
+
+## NsNotification について
+### Reference 
+[keyboardSelectionDidChangeNotification | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nstextinputcontext/1529849-keyboardselectiondidchangenotifi)
+[macOSXのinput source の確認・切替のメモ - Qiita](https://qiita.com/callmekohei/items/29c8a020a74163772997)
+[selectedKeyboardInputSource | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource)
+
 
 ## Markded Text は下線を引くなど、修飾を行うテキスト
 
