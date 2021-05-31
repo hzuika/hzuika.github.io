@@ -18,6 +18,15 @@ IME On はkeyDownイベントで捕捉されない．
 
 [selectedKeyboardInputSource | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource)
 
+## Memo 
+TISCreateInputSourceList はカーボン系の関数?
+
+https://developer.apple.com/documentation/appkit/nstextinputcontext?language=objc
+
+このNSTextInputContextのメソッドの中に使えそうなものがあるかもしれない．
+
+NSTextInputContextKeyboardSelectionDidChangeNotificationはIME切り替え時に送られる通知．objectはnil．
+
 
 ## Markded Text は下線を引くなど、修飾を行うテキスト
 
