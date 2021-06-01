@@ -29,6 +29,13 @@ https://github.com/godotengine/godot/blob/8f7f5846397297fff6e8a08f89bc60ce658699
 
 godot はドキュメントがしっかりしている?
 
+## Reference
+https://github.com/yvt/Stella2/blob/79bb01d5d11643c50769986796b6fae572e13db7/tcw3/pal/src/macos/TCWGestureHandlerView.m#L401
+
+https://github.com/chentoz/occ/blob/0eab3feb32ecadceb517d4c1d4b13ca3181d1306/tk8.6.11/macosx/tkMacOSXKeyEvent.c#L173
+
+can_input_text 変数が用意されている．
+
 
 
 ## NsNotification について
