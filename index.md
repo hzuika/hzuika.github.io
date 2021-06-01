@@ -24,8 +24,13 @@ https://github.com/miyako/4d-plugin-text-input-context/blob/ec5fc4df26b7e2b381f3
 keyboardInputSources
 全部のキーボードレイアウト?の取得(IMEで表示されるモード)
 
-selectedKeyboardInputSource
+selectedKeyboardInputSource  
 選択中のキーボードレイアウト(IMEモード)
+
+localizedNameForInputSource  
+Hiragana や ABC、 Hiragana (Google) など
+
+allowedInputSourceLocalesに[NSArray arrayWithObject: NSAllRomanInputSourcesLocaleIdentifier]を設定することで、Roman OnlyなInput Sourcesを指定できる。
 
 ## Memo 
 TISCreateInputSourceList はカーボン系の関数?
