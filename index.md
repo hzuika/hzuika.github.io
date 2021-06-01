@@ -48,6 +48,12 @@ https://github.com/minoki/InputSourceSelector/blob/master/InputSourceSelector.m
 
 TIS使い方がわかりやすく書かれている
 
+https://tech.nerune.co/other/cliclick-use-jp-keylayout/
+
+https://github.com/Microsoft/vscode/issues/23833
+
+
+
 
 ## NsNotification について
 ### Reference 
