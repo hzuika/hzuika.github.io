@@ -36,6 +36,9 @@ https://github.com/chentoz/occ/blob/0eab3feb32ecadceb517d4c1d4b13ca3181d1306/tk8
 
 can_input_text 変数が用意されている．
 
+[\[macOS\]\[Cocoa\]\[Swift\]IMEを変更させる - Qiita](https://qiita.com/SolaRayLino/items/8d01eebb550d871c35cd)
+
+[macOSXのinput source の確認・切替のメモ - Qiita](https://qiita.com/callmekohei/items/29c8a020a74163772997)
 
 
 ## NsNotification について
