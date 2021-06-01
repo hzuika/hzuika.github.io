@@ -21,9 +21,14 @@ DisplayServer::get_singleton()->has_feature(DisplayServer::FEATURE_IME)
 また，`void Window::set_ime_active(bool p_active)`の中でもこの関数が使用される．
 ただし，このメソッドは未使用．
 
+has_feature は FEATURE_IMEを入れると必ずtrueを返している?
+これは，IMEを使用するOSかどうかを返す関数?
+スマホOSだと，なかったりする?
+
 https://github.com/godotengine/godot/blob/8f7f5846397297fff6e8a08f89bc60ce658699cc/doc/classes/InputEventKey.xml#L46
 
 godot はドキュメントがしっかりしている?
+
 
 
 ## NsNotification について
