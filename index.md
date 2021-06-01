@@ -38,7 +38,11 @@ can_input_text 変数が用意されている．
 
 [\[macOS\]\[Cocoa\]\[Swift\]IMEを変更させる - Qiita](https://qiita.com/SolaRayLino/items/8d01eebb550d871c35cd)
 
+TIS で sourceLanguages を取得するとわかりそう。
+
 [macOSXのinput source の確認・切替のメモ - Qiita](https://qiita.com/callmekohei/items/29c8a020a74163772997)
+
+[⌨️キーボード配列の取得 - みずぴー日記](https://mzp.hatenablog.com/entry/2017/11/24/115718)
 
 
 ## NsNotification について
