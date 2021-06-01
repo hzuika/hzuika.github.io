@@ -44,6 +44,10 @@ TIS で sourceLanguages を取得するとわかりそう。
 
 [⌨️キーボード配列の取得 - みずぴー日記](https://mzp.hatenablog.com/entry/2017/11/24/115718)
 
+https://github.com/minoki/InputSourceSelector/blob/master/InputSourceSelector.m
+
+TIS使い方がわかりやすく書かれている
+
 
 ## NsNotification について
 ### Reference 
