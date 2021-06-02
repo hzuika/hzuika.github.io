@@ -67,6 +67,34 @@ selectedRange, {1, 0}
 selectedRange, {1, 0}
 ```
 
+selectedRangeで返される値は，自分で決めている．
+大事なのは，関数がいつ呼ばれるか，引数としてどのような値が渡されているのか．
+
+## "雨が降るように"と入力して，確定前に矢印キーで"降る"に移動した時
+```
+sertMarkedText, String, 雨が{
+    NSMarkedClauseSegment = 0;
+    NSUnderline = 1;
+    NSUnderlineColor = "NSCalibratedWhiteColorSpace 0.17 1";
+}降る{
+    NSMarkedClauseSegment = 1;
+    NSUnderline = 2;
+    NSUnderlineColor = "Generic Gray Gamma 2.2 Profile colorspace 0 1";
+}ように{
+    NSMarkedClauseSegment = 2;
+    NSUnderline = 1;
+    NSUnderlineColor = "NSCalibratedWhiteColorSpace 0.17 1";
+}, Selection, {2, 2}, Replacement, {9223372036854775807, 0}
+```
+
+Selectionの範囲が現在変換候補ウィンドウを出ている文字列の範囲で2から2文字という表し方．
+NSUnderlineの値が現在の変換候補ウィンドウの対象となる文字列であり，太い下線を引くべき場所．
+NSMarkedClauseSegmentの値が文字列を変換する単位で数えた時のインデックス．
+
+文字列の数え方は単語単位であり，バイト単位ではない．
+
+
+
 # TIS
 
 inputSource を取得して，ASCIICapableを調べれば，半角英数で1, IME入力時に0が返ってくる．
