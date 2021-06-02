@@ -1,4 +1,159 @@
-# なぜ Mac の Blender は日本語入力ができないの?
+# なぜ Mac の Blender は日本語入力ができないのか
+
+macOS から送られてきたインプットメソッドの処理をしていないから．
+
+するべきこと
+* NsTextInputClient プロトコルのメソッドの実装．
+* NsNotification による入力切替の通知によって，keyDownイベントを分岐させる．
+* mac IME を処理するためのクラスを作ったほうがいいかもしれない．
+
+# markedText と selectedText の調査
+* IME有効時に左右矢印キーでカーソルを移動させたり，Backspaceを押すと，selectedRangeが発火する．Appleのサンプルだとカーソルが移動しないので，値がどのように変わるかは分からない．
+
+## "あ" と入力し始めた時
+sertMarkedTextが発火する．引数は次の値が入っている．
+```
+aString, 
+あ{
+    NSMarkedClauseSegment = 0;
+    NSUnderline = 1;
+    NSUnderlineColor = "NSCalibratedWhiteColorSpace 0.17 1";
+}, 
+Selection, {1, 0}, 
+Replacement, {9223372036854775807, 0}
+```
+selectedRangeが3回発火する．引数は次の値．
+```
+{1, 0}
+```
+markedRangeが発火する．引数は， 
+```
+{0, 1}
+```
+
+## ("あ"と入力した後)Enterを押して，確定した時
+```
+selectedRange, {1, 0}
+insertText, String, あ, Replacement, {9223372036854775807, 0}
+selectedRange, {1, 0}
+selectedRange, {1, 0}
+selectedRange, {1, 0}
+selectedRange, {1, 0}
+```
+
+## ("あ"と入力した後)"m"を押した時
+```
+selectedRange, {1, 0}
+sertMarkedText, String, あｍ{
+    NSMarkedClauseSegment = 0;
+    NSUnderline = 1;
+    NSUnderlineColor = "NSCalibratedWhiteColorSpace 0.17 1";
+}, Selection, {2, 0}, Replacement, {9223372036854775807, 0}
+selectedRange, {2, 0}
+selectedRange, {2, 0}
+selectedRange, {2, 0}
+```
+
+## ("あｍ"と入力した後)"e"を入力して，ことえりのライブ変換によって，"雨"に変換された時
+```
+selectedRange, {2, 0}
+sertMarkedText, String, 雨{
+    NSMarkedClauseSegment = 0;
+    NSUnderline = 1;
+    NSUnderlineColor = "NSCalibratedWhiteColorSpace 0.17 1";
+}, Selection, {1, 0}, Replacement, {9223372036854775807, 0}
+selectedRange, {1, 0}
+selectedRange, {1, 0}
+selectedRange, {1, 0}
+```
+
+# TIS
+
+inputSource を取得して，ASCIICapableを調べれば，半角英数で1, IME入力時に0が返ってくる．
+もしくは，kTISPropertyInputSourceLanguagesで"(ja)"となるかどうか．
+CJKだけならkTISPropertyInputSourceLanguagesの方がいいかもしれない．
+```
+        NSLog(@"%@", (NSString *)TISGetInputSourceProperty((TISInputSourceRef)inputSource, kTISPropertyInputSourceIsASCIICapable));
+```
+# keyDown イベント
+IME On はkeyDownイベントで捕捉されない．
+
+godotでは，`imeInputEventInProgress`でIME使用中を表現．
+setMarkedText内のwd.im_activeの時のみ，trueになる．
+im_activeはwindow_set_ime_activeの第一引数bool型のp_activeによって設定される．
+この関数は他のOSにも存在していて，OSごとの違いを吸収しているっぽい．
+使用されている場所付近で，IME関係の情報を取得していると思われる場所は，if内で評価されているFEATRUE_IME．
+```
+DisplayServer::get_singleton()->has_feature(DisplayServer::FEATURE_IME)
+```
+また，`void Window::set_ime_active(bool p_active)`の中でもこの関数が使用される．
+ただし，このメソッドは未使用．
+
+has_feature は FEATURE_IMEを入れると必ずtrueを返している?
+これは，IMEを使用するOSかどうかを返す関数?
+スマホOSだと，なかったりする?
+
+https://github.com/godotengine/godot/blob/8f7f5846397297fff6e8a08f89bc60ce658699cc/doc/classes/InputEventKey.xml#L46
+
+godot はドキュメントがしっかりしている?
+
+## Reference
+https://github.com/yvt/Stella2/blob/79bb01d5d11643c50769986796b6fae572e13db7/tcw3/pal/src/macos/TCWGestureHandlerView.m#L401
+
+https://github.com/chentoz/occ/blob/0eab3feb32ecadceb517d4c1d4b13ca3181d1306/tk8.6.11/macosx/tkMacOSXKeyEvent.c#L173
+
+can_input_text 変数が用意されている．
+
+[\[macOS\]\[Cocoa\]\[Swift\]IMEを変更させる - Qiita](https://qiita.com/SolaRayLino/items/8d01eebb550d871c35cd)
+
+TIS で sourceLanguages を取得するとわかりそう。
+
+[macOSXのinput source の確認・切替のメモ - Qiita](https://qiita.com/callmekohei/items/29c8a020a74163772997)
+
+[⌨️キーボード配列の取得 - みずぴー日記](https://mzp.hatenablog.com/entry/2017/11/24/115718)
+
+https://github.com/minoki/InputSourceSelector/blob/master/InputSourceSelector.m
+
+TIS使い方がわかりやすく書かれている
+
+https://tech.nerune.co/other/cliclick-use-jp-keylayout/
+
+https://github.com/Microsoft/vscode/issues/23833
+
+
+
+
+## NsNotification について
+### Reference 
+[keyboardSelectionDidChangeNotification | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nstextinputcontext/1529849-keyboardselectiondidchangenotifi)
+
+[macOSXのinput source の確認・切替のメモ - Qiita](https://qiita.com/callmekohei/items/29c8a020a74163772997)
+
+[selectedKeyboardInputSource | Apple Developer Documentation](https://developer.apple.com/documentation/appkit/nstextinputcontext/1533970-selectedkeyboardinputsource)
+
+https://github.com/miyako/4d-plugin-text-input-context/blob/ec5fc4df26b7e2b381f306aa131132a62486a08c/text-input-context/4DPlugin-Text-Input-Context.cpp#L70
+
+## NSTextInputContext
+keyboardInputSources
+全部のキーボードレイアウト?の取得(IMEで表示されるモード)
+
+selectedKeyboardInputSource  
+選択中のキーボードレイアウト(IMEモード)
+
+localizedNameForInputSource  
+Hiragana や ABC、 Hiragana (Google) など
+
+allowedInputSourceLocalesに[NSArray arrayWithObject: NSAllRomanInputSourcesLocaleIdentifier]を設定することで、Roman OnlyなInput Sourcesを指定できる。
+
+## Memo 
+TISCreateInputSourceList はカーボン系の関数?
+
+https://developer.apple.com/documentation/appkit/nstextinputcontext?language=objc
+
+このNSTextInputContextのメソッドの中に使えそうなものがあるかもしれない．
+
+NSTextInputContextKeyboardSelectionDidChangeNotificationはIME切り替え時に送られる通知．objectはnil．
+
 
 ## Markded Text は下線を引くなど、修飾を行うテキスト
 
