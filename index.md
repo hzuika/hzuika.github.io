@@ -368,6 +368,65 @@ wm_event_add_ghostevent は ghost_event_proc から呼ばれる．
 
 次は，バグ報告する．
 
+
+## Cocoa 
+```
+  [self interpretKeyEvents:events];
+```
+eventをアレイ上にしないといけない
+
+```
+  [self interpretKeyEvents: [NSArray arrayWithObject: event]];
+```
+
+呼ばれる関数について
+IME On 時
+```
+2021-05-28 09:49:37.132 Blender[31859:1508621] hasMarkedText
+2021-05-28 09:49:37.132 Blender[31859:1508621] selectedRange
+2021-05-28 09:49:37.132 Blender[31859:1508621] firstRectForCharacterRange
+2021-05-28 09:49:37.132 Blender[31859:1508621] selectedRange
+2021-05-28 09:49:37.134 Blender[31859:1508621] selectedRange
+2021-05-28 09:49:37.134 Blender[31859:1508621] selectedRange
+```
+
+IME On で 文字入力時
+```
+2021-05-28 09:51:54.924 Blender[31859:1508621] hasMarkedText
+2021-05-28 09:51:54.924 Blender[31859:1508621] selectedRange
+2021-05-28 09:51:54.924 Blender[31859:1508621] firstRectForCharacterRange
+2021-05-28 09:51:54.925 Blender[31859:1508621] selectedRange
+2021-05-28 09:51:54.926 Blender[31859:1508621] selectedRange
+2021-05-28 09:51:54.927 Blender[31859:1508621] attributedSubstringForProposedRange
+2021-05-28 09:51:54.934 Blender[31859:1508621] selectedRange
+2021-05-28 09:51:54.935 Blender[31859:1508621] hasMarkedText
+2021-05-28 09:51:54.935 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:51:54.935 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:51:54.935 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:51:54.935 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:51:54.935 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:51:54.935 Blender[31859:1508621] setMarkedText
+2021-05-28 09:51:54.935 Blender[31859:1508621] selectedRange
+2021-05-28 09:51:54.936 Blender[31859:1508621] selectedRange
+2021-05-28 09:51:54.936 Blender[31859:1508621] selectedRange
+2021-05-28 09:51:55.136 Blender[31859:1508621] hasMarkedText
+2021-05-28 09:51:55.136 Blender[31859:1508621] markedRange
+2021-05-28 09:51:55.136 Blender[31859:1508621] firstRectForCharacterRange
+```
+
+IME Off 時
+関数は呼ばれない．
+
+IME Off で 文字入力時
+```
+2021-05-28 09:50:33.010 Blender[31859:1508621] hasMarkedText
+2021-05-28 09:50:33.010 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:50:33.010 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:50:33.010 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:50:33.010 Blender[31859:1508621] validAttributesForMarkedText
+2021-05-28 09:50:33.010 Blender[31859:1508621] insertText
+```
+
 ## Reference
 
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/TextUILayer/Tasks/CreatingATextView.html
