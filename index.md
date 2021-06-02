@@ -17,16 +17,19 @@ composition, 雨が降るように
 cursor, 0
 sel_start, 0
 sel_end, 6
+result, (null)
 // "降るように" を選択しているとき
 composition, 雨が降るように
 cursor, 6
 sel_start, 6
 sel_end, 21
+result, (null)
 // 確定したとき
 composition, (null)
 cursor, -1
 sel_start, -1
 sel_end, -1
+result, 雨が降るように
 ```
 
 ## "あ" と入力し始めた時
