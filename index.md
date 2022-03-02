@@ -1,3 +1,7 @@
+# Profile
+
+* [Zenn](https://zenn.dev/hzuika)
+
 # Blenderへのコミット
 
 * [Fix some shortcut keys not working on macOS with Japanese input](https://developer.blender.org/rB7336af325937)
