@@ -1,6 +1,7 @@
 # Profile
 
 * [Zenn](https://zenn.dev/hzuika)
+* [note](https://note.com/hzuika/)
 
 # Blenderへのコミット
 
