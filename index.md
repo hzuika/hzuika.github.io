@@ -2,6 +2,7 @@
 
 * [Zenn](https://zenn.dev/hzuika)
 * [note](https://note.com/hzuika/)
+* [blog](https://hzuika.com/blog/)
 
 # Blenderへのコミット
 
